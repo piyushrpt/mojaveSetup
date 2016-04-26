@@ -7,3 +7,6 @@
 2. Alfred 2
 3. Keepass-X
 4. iTerm2
+5. All OS updates from App store
+
+
