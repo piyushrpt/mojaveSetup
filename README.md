@@ -27,13 +27,13 @@
 Install ports with ''sudo port install'' unless specified otherwise
 
 1. gcc5
-   sudo port select gcc mp-gcc5 (restart terminal)
+..* sudo port select gcc mp-gcc5 (restart terminal)
 2. cmake gmake bison gawk autoconf autoconf-archive
 3. subversion
 4. python27
-   $ sudo port select python python27
+..* sudo port select python python27
 5. python35
-   sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.5/bin/python3 /opt/local/bin/python3
-   sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.5/include/python3.5m /opt/local/include/python3.5m
+..* sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.5/bin/python3 /opt/local/bin/python3
+..* sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.5/include/python3.5m /opt/local/include/python3.5m
 
 
