@@ -28,20 +28,30 @@ Install ports with ''sudo port install'' unless specified otherwise
 
 1. gcc5
 ..* sudo port select gcc mp-gcc5 (restart terminal)
-2. cmake gmake bison gawk autoconf autoconf-archive gconf coreutils automake pkgconfig
-3. freetype openmotif 
-3. subversion
-4. python27
+2. cmake gmake bison gawk autoconf autoconf-archive 
+3. gconf coreutils automake pkgconfig dpkg ctags
+4. tree unzip unrar szip p7zip gzip gnutar 
+6. wget +ssl
+7. freetype tiff openmotif 
+8. subversion
+9. python27
   * sudo port select python python27
-5. python35
+10. python35
   * sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.5/bin/python3 /opt/local/bin/python3
   * sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.5/include/python3.5m /opt/local/include/python3.5m
-6. fftw +gcc5  fftw-single +gcc5
-7. fftw-3 +gcc5  fftw-3-long +gcc5 fftw-3-single +gcc5
-8. aria2 openldap
-9. openmpi-default +gcc5 openmpi-gcc5 +fortran
+11. fftw +gcc5  fftw-single +gcc5
+12. fftw-3 +gcc5  fftw-3-long +gcc5 fftw-3-single +gcc5
+13. aria2 openldap
+14. openmpi-default +gcc5 openmpi-gcc5 +fortran
   * sudo port select mpi openmpi-gcc5-fortran
-10. xorg-libXt +flat_namespace  
-11. texlive-bin
-12. 
+15. xorg-libXt +flat_namespace  
+16. texlive +doc +full
+17. lapack +gfortran
+18. eigen3 +blas +gcc5
+19. gsl +gcc5
+19. cgal
+20. bzr git rsync
+21. hdf5 hdfeos5 h5utils
+22. netcdf netcdf-cxx netcdf-fortran grib_api +gcc5
+22. proj 
 
