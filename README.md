@@ -30,7 +30,8 @@ Install ports with ''sudo port install'' unless specified otherwise
 ..* sudo port select gcc mp-gcc5 (restart terminal)
 2. cmake gmake bison gawk autoconf autoconf-archive 
 3. gconf coreutils automake pkgconfig dpkg ctags
-4. tree unzip unrar szip p7zip gzip gnutar 
+4. tree unzip unrar szip p7zip gzip gnutar
+5. gawk gsed 
 6. wget +ssl
 7. freetype tiff openmotif 
 8. subversion
@@ -49,9 +50,30 @@ Install ports with ''sudo port install'' unless specified otherwise
 17. lapack +gfortran
 18. eigen3 +blas +gcc5
 19. gsl +gcc5
-19. cgal
+19. cgal sfcgal 
 20. bzr git rsync
-21. hdf5 hdfeos5 h5utils
+21. hdf4 hdf5 hdfeos hdfeos5 h5utils
 22. netcdf netcdf-cxx netcdf-fortran grib_api +gcc5
-22. proj 
+23. postgresql95 postgresql95-server
+   * Follow instructions for setting up db that are displayed on the screen during installation
+24. proj cairo scons pandoc
+25. opencv +python27
+26. gimp2 ImageMagick
+27. samba3 swig swig-python
+28. py27-numpy +atlas +gcc5
+29. py27-scipy +gcc5
+30. py27-matplotlib +cairo +tkinter 
+31. py27-pandas py27-sympy py27-yaml py27-simplejson py27-Pillow
+32. py27-ipython +notebook +parallel
+   * sudo port select --set ipython py27-ipython
+   * sudo port select --set ipython2 py27-ipython
+33. gdal +expat +geos +hdf4 +hdf5 +netcdf +openjpeg +postgresql95 +sqlite3 
+34. py27-gdal py27-cython py27-h5py py27-lxml py27-networkx py27-shapely
+35. py27-pygrib py27-pyproj py27-cartopy py27-fiona py27-matplotlib-basemap
+36. py35-numpy +atlas +gcc5
+37. py35-scipy +gcc5
+38. py35-matplotlib +cairo +tkinter py35-matplotlib-basemap
+39. py35-pandas py35-sympy py35-yaml py35-simplejson
+40. py35-h5py py35-cartopy py35-shapely py35-fiona py35-networkx
+41. gmt5 kealib pandoc
 
