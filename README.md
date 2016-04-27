@@ -27,10 +27,10 @@
 Install ports with ''sudo port install'' unless specified otherwise
 
 1. gcc5
-..* sudo port select gcc mp-gcc5 (restart terminal)
+  * sudo port select gcc mp-gcc5 (restart terminal)
 2. cmake gmake bison gawk autoconf autoconf-archive 
 3. gconf coreutils automake pkgconfig dpkg ctags
-4. tree unzip unrar szip p7zip gzip gnutar
+4. tree unzip unrar szip p7zip gzip gnutar cabextract
 5. gawk gsed 
 6. wget +ssl
 7. freetype tiff openmotif 
@@ -75,5 +75,12 @@ Install ports with ''sudo port install'' unless specified otherwise
 38. py35-matplotlib +cairo +tkinter py35-matplotlib-basemap
 39. py35-pandas py35-sympy py35-yaml py35-simplejson
 40. py35-h5py py35-cartopy py35-shapely py35-fiona py35-networkx
-41. gmt5 kealib pandoc
-
+41. py35-ipython +notebook +parallel
+    * sudo port select --set ipython py35-ipython
+    * sudo port select --set ipython3 py35-ipython
+42. gmt5 kealib pandoc
+43. zmq py27-zmq py35-zmq
+44. py35-bokeh py35-dynd py35-dask py35-sphinx py35-pip
+45. postgis2 +gui +postgresql95 +raster +sfcgal +topology
+46. xxdiff py27-xmldiff wdiff cwdiff ndiff
+47. 
