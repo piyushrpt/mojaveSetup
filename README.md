@@ -25,7 +25,8 @@
 
 ##### List of ports in sequence
 ----------
-Install ports with ''sudo port install'' unless specified otherwise
+- Install ports with ''sudo port install'' unless specified otherwise
+- Note that the gcc, python, postgresql versions evolve with time. Pick a consistent set for installing your ports
 
 1. gcc5
   * sudo port select gcc mp-gcc5 (restart terminal)
@@ -83,7 +84,7 @@ Install ports with ''sudo port install'' unless specified otherwise
 44. py35-bokeh py35-dynd py35-dask py35-sphinx py35-pip
 45. postgis2 +gui +postgresql95 +raster +sfcgal +topology
 46. py27-xmldiff wdiff cwdiff ndiff
-47. qgis + postgresql95 +qt5
+47. qgis +postgresql95 +qt4
 
 ####Other programs
 ------------
