@@ -70,21 +70,23 @@
    * sudo port select --set ipython py27-ipython
    * sudo port select --set ipython2 py27-ipython
 33. gdal +expat +geos +hdf4 +hdf5 +netcdf +openjpeg +postgresql95 +sqlite3 
-34. py27-gdal py27-cython py27-h5py py27-lxml py27-networkx py27-shapely
-35. py27-pygrib py27-pyproj py27-cartopy py27-fiona py27-matplotlib-basemap
-36. py35-numpy +gcc5 (+atlas is recommended but port is often broken with this option)
-37. py35-scipy +gcc5 (+atlas is recommended but port is often broken with this option)
-38. py35-matplotlib +cairo +tkinter py35-matplotlib-basemap
-39. py35-pandas py35-sympy py35-yaml py35-simplejson
-40. py35-h5py py35-cartopy py35-shapely py35-fiona py35-networkx
-41. py35-ipython +notebook +parallel
+34. py27-gdal py27-cython py27-h5py
+35. py27-lxml py27-networkx py27-shapely 
+36. py27-pygrib py27-pyproj py27-cartopy py27-fiona py27-matplotlib-basemap
+37. py35-numpy +gcc5 (+atlas is recommended but port is often broken with this option)
+38. py35-scipy +gcc5 (+atlas is recommended but port is often broken with this option)
+39. py35-matplotlib +cairo +tkinter py35-matplotlib-basemap
+40. py35-pandas py35-sympy py35-yaml py35-simplejson
+41. py35-h5py py35-cartopy py35-shapely py35-fiona py35-networkx
+42. py35-ipython +notebook +parallel
     * sudo port select --set ipython3 py35-ipython
-42. gmt5 kealib pandoc
-43. zmq py27-zmq py35-zmq
-44. py35-bokeh py35-dynd py35-dask py35-sphinx py35-pip
-45. postgis2 +gui +postgresql95 +raster +sfcgal +topology
-46. py27-xmldiff wdiff cwdiff ndiff
-47. qgis +postgresql95 +qt4
+43. py35-mpi4py +gcc5 +openmpi
+44. gmt5 kealib pandoc
+45. zmq py27-zmq py35-zmq
+46. py35-bokeh py35-dynd py35-dask py35-sphinx py35-pip
+47. postgis2 +gui +postgresql95 +raster +sfcgal +topology
+48. py27-xmldiff wdiff cwdiff ndiff
+
 
 ####Other programs
 ------------
