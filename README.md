@@ -76,7 +76,6 @@ Install ports with ''sudo port install'' unless specified otherwise
 39. py35-pandas py35-sympy py35-yaml py35-simplejson
 40. py35-h5py py35-cartopy py35-shapely py35-fiona py35-networkx
 41. py35-ipython +notebook +parallel
-    * sudo port select --set ipython py35-ipython
     * sudo port select --set ipython3 py35-ipython
 42. gmt5 kealib pandoc
 43. zmq py27-zmq py35-zmq
