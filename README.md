@@ -60,8 +60,8 @@ Install ports with ''sudo port install'' unless specified otherwise
 25. opencv +python27
 26. gimp2 ImageMagick
 27. samba3 swig swig-python
-28. py27-numpy +atlas +gcc5
-29. py27-scipy +gcc5
+28. py27-numpy +gcc5    (+atlas is recommended but port is often broken with this option)
+29. py27-scipy +gcc5    (+atlas is recommended but port is often broken with this option)
 30. py27-matplotlib +cairo +tkinter 
 31. py27-pandas py27-sympy py27-yaml py27-simplejson py27-Pillow
 32. py27-ipython +notebook +parallel
@@ -70,8 +70,8 @@ Install ports with ''sudo port install'' unless specified otherwise
 33. gdal +expat +geos +hdf4 +hdf5 +netcdf +openjpeg +postgresql95 +sqlite3 
 34. py27-gdal py27-cython py27-h5py py27-lxml py27-networkx py27-shapely
 35. py27-pygrib py27-pyproj py27-cartopy py27-fiona py27-matplotlib-basemap
-36. py35-numpy +atlas +gcc5
-37. py35-scipy +gcc5
+36. py35-numpy +gcc5 (+atlas is recommended but port is often broken with this option)
+37. py35-scipy +gcc5 (+atlas is recommended but port is often broken with this option)
 38. py35-matplotlib +cairo +tkinter py35-matplotlib-basemap
 39. py35-pandas py35-sympy py35-yaml py35-simplejson
 40. py35-h5py py35-cartopy py35-shapely py35-fiona py35-networkx
