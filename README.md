@@ -7,7 +7,8 @@
 2. Alfred 2
 3. Keepass-X
 4. iTerm2
-5. All OS updates from App store (Restart if needed)
+5. CyberDuck (ftp client) 
+6. All OS updates from App store (Restart if needed)
 
 
 #### Macports
@@ -81,5 +82,20 @@ Install ports with ''sudo port install'' unless specified otherwise
 43. zmq py27-zmq py35-zmq
 44. py35-bokeh py35-dynd py35-dask py35-sphinx py35-pip
 45. postgis2 +gui +postgresql95 +raster +sfcgal +topology
-46. xxdiff py27-xmldiff wdiff cwdiff ndiff
-47. 
+46. py27-xmldiff wdiff cwdiff ndiff
+47. qgis + postgresql95 +qt5
+
+####Other programs
+------------
+
+###### Textwrangler
+--------------------
+- Install textwrangler itself
+- Install textwrangler command line tools (includes twdiff for comparing files / folders)
+- twdiff appears to be better than other diff tools that are available 
+
+##### Google Earth Pro
+----------------------
+- Google Earth Pro is now free
+
+
