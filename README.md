@@ -101,4 +101,6 @@
 ----------------------
 - Google Earth Pro is now free
 
-
+##### Environment modules
+--------------------------
+Follow instructions [here](./modules.md)
