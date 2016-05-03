@@ -17,10 +17,6 @@ export CLICOLOR=1
 export PS1="\h:\w>: "
 export PYTHONSTARTUP=/Users/agram/.pythonstartup
 
-###Add these two lines to setup modules
-source /usr/local/Modules/3.2.10/init/bash
-module load use.own
-
 ##
 # Your previous /Users/agram/.bash_profile file was backed up as /Users/agram/.bash_profile.macports-saved_2013-03-04_at_11:21:37
 ##
@@ -30,4 +26,8 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 export MANPATH=/opt/local/share/man:$MANPATH
+
+###Add these two lines to setup modules
+source /usr/local/Modules/3.2.10/init/bash
+module load use.own
 ```
