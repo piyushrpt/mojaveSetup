@@ -27,6 +27,7 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export MANPATH=/opt/local/share/man:$MANPATH
 
 ###Add these two lines to setup modules
+##If using another shell use that instead of bash
 source /usr/local/Modules/3.2.10/init/bash
 module load use.own
 ```
