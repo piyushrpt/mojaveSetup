@@ -11,6 +11,7 @@ We will build this from scratch.
     - ./configure --prefix=/usr/local
     - make
     - sudo make install
+
 4.Modify .bash_profile as shown below. If using another shell, adapt the commands as needed:
 ```bash
 export CLICOLOR=1
