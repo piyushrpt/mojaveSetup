@@ -15,7 +15,6 @@ We will build this from scratch.
 ```bash
 export CLICOLOR=1
 export PS1="\h:\w>: "
-export PYTHONSTARTUP=/Users/agram/.pythonstartup
 
 ##
 # Your previous /Users/agram/.bash_profile file was backed up as /Users/agram/.bash_profile.macports-saved_2013-03-04_at_11:21:37
