@@ -103,4 +103,4 @@
 
 ##### Environment modules
 --------------------------
-Follow instructions [here](./modules.md)
+- Follow instructions [here](./modules.md)
