@@ -1,8 +1,8 @@
 ###Manual installation of ports
 
-Install ports with ''sudo port install'' unless specified otherwise.
+- Install ports with ''sudo port install'' unless specified otherwise.
 
-Note that the gcc, python, postgresql versions evolve with time. Pick a consistent set for installing your ports
+- Note that the gcc, python, postgresql versions evolve with time. Pick a consistent set for installing your ports
 
 1. gcc5
    - sudo port select gcc mp-gcc5 (restart terminal)
