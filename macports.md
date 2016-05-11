@@ -64,3 +64,4 @@
 48. py35-bokeh py35-dynd py35-dask py35-sphinx py35-pip
 49. postgis2 +gui +postgresql95 +raster +sfcgal +topology
 50. py27-xmldiff wdiff cwdiff ndiff
+51. qgis +postgresql95 +qt4
