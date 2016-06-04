@@ -95,7 +95,7 @@ Commands for setting up this directory structure
 ###Step 4: Untar downloaded tarball in src/VERSION
 ---------------------------------------------------
 
-Untar the downloaded tarball in the src/VERSION folder. This will unpack a directory called isce (or) isce-2.0.0_VERSION. The exact name of the unpacked folder doesn't matter.
+Untar the downloaded tarball in the src/VERSION folder. This will unpack a directory called isce. 
 
 ```bash
 > cd /Users/agram/tools/isce/src/201604
@@ -105,6 +105,33 @@ Untar the downloaded tarball in the src/VERSION folder. This will unpack a direc
 ###Step 5: Create SConfigISCE file in config/VERSION
 ----------------------------------------------------
 
+SConfigISCE is the configuration file used to set paths to the correct directories for building ISCE. We will create a new SConfigISCE for each version to ensure the ability to modify every installed version as needed. The SConfigISCE file needs to be created under ROOT/config/VERSION folder.
 
+```bash
+> cd /Users/agram/tools/isce/config/201604
+> vi SConfigISCE
+```
 
+The template for SConfigISCE is shown below. You only need to change the PRJ_SCONS_BUILD and PRJ_SCONS_INSTALL values.
 
+```bash
+
+#Build Directory
+PRJ_SCONS_BUILD = /Users/agram/tools/isce/build/201604  
+
+#Install Directory
+PRJ_SCONS_INSTALL = /Users/agram/tools/isce/install/201604/isce
+
+LIBPATH =  /opt/local/lib
+CPPPATH =  /opt/local/include/python3.5m
+FORTRANPATH =  /opt/local/include
+FORTRAN = gfortran
+CC = gcc
+
+MOTIFLIBPATH = /opt/local/lib              # path to libXm.dylib
+X11LIBPATH = /opt/local/lib                # path to libXt.dylib
+MOTIFINCPATH = /opt/local/include          # path to location of the Xm directory with various include files (.h)
+X11INCPATH = /opt/local/include            # path to location of the X11 directory with various include files
+```
+
+###Step 6: 
