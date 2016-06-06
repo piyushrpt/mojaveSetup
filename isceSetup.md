@@ -163,7 +163,7 @@ module-whatis   "adds ISCE stuff to your environment"
 set     version      3.2.10
 
 #Change this for each version
-set   isceversion 201604
+set     isceversion 201604
 
 set		basedir		/Users/agram/tools/ISCE3_latest
 set		installdir      $basedir/install/$isceversion/isce
@@ -180,3 +180,46 @@ prepend-path    PATH    $installdir/bin
 prepend-path    PYTHONPATH    $basedir/install/$isceversion
 ```
 
+Once you have set this up, you should be able to see this module listed amongst the available modules:
+```bash
+> module list
+  1) use.own        3) gee   5) isce/201604
+  2) basic          4) isce/201512
+```
+
+If you don't see the isce module file listed, make sure you have loaded the "use.own" module
+```bash
+> module load use.own
+```
+This instructs modules to look for module files in your HOME/privatemodules folder.
+
+
+###Step 7: Load module and install isce
+----------------------------------------
+
+The first thing to do to use any version of ISCE or install a version of ISCE is to load the corresponding module. For this example, I execute
+
+```bash
+module load isce/201612
+```
+
+Change to the source directory and use scons to install.
+```bash
+> cd /Users/agram/tools/isce/src/201604/isce
+> scons install
+```
+
+This should install isce. Run "scons install" twice to make sure that all components are installed successfully.
+
+
+###Step 8: Ready to use
+-----------------------
+You are now ready to use isce. Load the modulefile for the version you want to use and when you want to restore the environment, unload the module
+
+```bash
+> module load isce/201604
+> .... Your work ....
+> module unload isce
+```
+
+To switch between versions, unload the module for the current version and load the module corresponding to the version you want to use. Modules is a clean way of managing your environment variables. 
