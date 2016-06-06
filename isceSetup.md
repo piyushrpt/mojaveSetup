@@ -165,7 +165,7 @@ set     version      3.2.10
 #Change this for each version
 set     isceversion 201604
 
-set		basedir		/Users/agram/tools/ISCE3_latest
+set		basedir		/Users/agram/tools/isce
 set		installdir      $basedir/install/$isceversion/isce
 setenv		ISCE_HOME	    $installdir
 setenv		SCONS_CONFIG_DIR    $basedir/config/$isceversion
