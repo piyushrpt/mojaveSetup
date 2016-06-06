@@ -134,4 +134,49 @@ MOTIFINCPATH = /opt/local/include          # path to location of the Xm director
 X11INCPATH = /opt/local/include            # path to location of the X11 directory with various include files
 ```
 
-###Step 6: 
+###Step 6: Setup modulefile for specific version of ISCE
+---------------------------------------------------------
+
+We use environment modules to activate/ deactivate a specific version of ISCE.
+Every version will need its own module file located at MODDIR/VERSION, that sets up appropriate environment variables and paths.
+
+Shown below is the template for isce/201604 located at /Users/agram/privatemodules/isce/201604
+
+```bash
+#%Module1.0#####################################################################
+##
+## isce modulefile
+##
+## privatemodules/isce. Generated from dot.in by configure.
+##
+proc ModulesHelp { } {
+        global version
+
+        puts stderr "\tAdds ISCE directory to your PYTHONPATH environment variable"
+        puts stderr "\n\tAlso sets up PATH and LD_LIBRARY_PATH variables\n"
+        puts stderr "\n\tVersion $version\n"
+}
+
+module-whatis   "adds ISCE stuff to your environment"
+
+# for Tcl script use only
+set     version      3.2.10
+
+#Change this for each version
+set   isceversion 201604
+
+set		basedir		/Users/agram/tools/ISCE3_latest
+set		installdir      $basedir/install/$isceversion/isce
+setenv		ISCE_HOME	    $installdir
+setenv		SCONS_CONFIG_DIR    $basedir/config/$isceversion
+
+###To make apps available at command line
+prepend-path	PATH	$installdir/applications
+
+###To make mdx and other utils available at command line
+prepend-path    PATH    $installdir/bin
+
+###To make isce importable in python
+prepend-path    PYTHONPATH    $basedir/install/$isceversion
+```
+
