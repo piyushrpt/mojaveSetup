@@ -67,3 +67,7 @@ For instructions see [here](./macports.md)
 ##### Environment modules
 --------------------------
 - Follow instructions [here](./modules.md)
+
+##### You are ready to install ISCE
+------------------------------------
+- Follow instructions [here](./isceSetup.md)
