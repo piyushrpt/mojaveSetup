@@ -7,12 +7,12 @@ The setup is general and allows one to simultaneously install multiple versions 
 
 Lookup table for mapping variables to locations on disk. The variables are not environment variables. We just use these to simplify instructions.
 
-|   VARIABLE   |   MY VALUE                  |     Comment                               |
-|--------------|-----------------------------|-------------------------------------------|
-|    HOME      |  /Users/agram               |  Default home directory on El Capitan     |
-|    ROOT      |  /Users/agram/tools/isce    |  ROOT folder for ISCE installation        |
-|    MODDIR    |  /Users/privatemodules/isce |  Folder for storing module files for ISCE |
-|    VERSION   |  201604                     |  Version number of ISCE release           |
+|   VARIABLE   |   MY VALUE                        |     Comment                               |
+|--------------|-----------------------------------|-------------------------------------------|
+|    HOME      |  /Users/agram                     |  Default home directory on El Capitan     |
+|    ROOT      |  /Users/agram/tools/isce          |  ROOT folder for ISCE installation        |
+|    MODDIR    |  /Users/agram/privatemodules/isce |  Folder for storing module files for ISCE |
+|    VERSION   |  201604                           |  Version number of ISCE release           |
 
 
 
