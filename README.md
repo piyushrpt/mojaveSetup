@@ -63,6 +63,7 @@ For instructions see [here](./macports.md)
 ##### Google Earth Pro
 ----------------------
 - Google Earth Pro is now free
+- Sign in with your email and password: GEPFREE
 
 ##### Environment modules
 --------------------------
