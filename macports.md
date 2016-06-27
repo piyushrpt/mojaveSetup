@@ -17,7 +17,7 @@
    - sudo port select python python27
 10. python35
    - sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.5/bin/python3 /opt/local/bin/python3
-   -sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.5/include/python3.5m /opt/local/include/python3.5m
+   - sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.5/include/python3.5m /opt/local/include/python3.5m
 11. fftw +gcc5 fftw-single +gcc5
 12. fftw-3 +gcc5 fftw-3-long +gcc5 fftw-3-single +gcc5
 13. aria2 openldap
