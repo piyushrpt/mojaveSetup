@@ -11,19 +11,19 @@
 4. tree unzip unrar szip p7zip gzip gnutar cabextract
 5. gawk gsed
 6. wget +ssl
-7. freetype tiff openmotif
-8. subversion
-9. python27
+7. xorg-libXt +flat_namespace
+8. freetype tiff openmotif
+9. subversion
+10. python27
    - sudo port select python python27
-10. python35
+11. python35
    - sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.5/bin/python3 /opt/local/bin/python3
    - sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.5/include/python3.5m /opt/local/include/python3.5m
-11. fftw +gcc5 fftw-single +gcc5
-12. fftw-3 +gcc5 fftw-3-long +gcc5 fftw-3-single +gcc5
-13. aria2 openldap
-14. openmpi-default +gcc5 openmpi-gcc5 +fortran
-15. sudo port select mpi openmpi-gcc5-fortran
-16. xorg-libXt +flat_namespace
+12. fftw +gcc5 fftw-single +gcc5
+13. fftw-3 +gcc5 fftw-3-long +gcc5 fftw-3-single +gcc5
+14. aria2 openldap
+15. openmpi-default +gcc5 openmpi-gcc5 +fortran
+16. sudo port select mpi openmpi-gcc5-fortran 
 17. texlive +doc +full
 18. lapack +gfortran
 19. eigen3 +blas +gcc5
