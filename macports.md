@@ -45,7 +45,7 @@
 33. py27-ipython +notebook +parallel
    - sudo port select --set ipython py27-ipython
    - sudo port select --set ipython2 py27-ipython
-34. gdal +expat +geos +hdf4 +hdf5 +netcdf +openjpeg +postgresql95 +sqlite3
+34. gdal +curl +expat +geos +hdf4 +hdf5 +netcdf +openjpeg +postgresql95 +sqlite3
 35. py27-gdal py27-cython py27-h5py
 36. py27-lxml py27-networkx py27-shapely
 37. py27-pygrib py27-pyproj py27-cartopy py27-fiona py27-matplotlib-basemap
