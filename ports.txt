@@ -120,3 +120,16 @@ py27-xmldiff
 wdiff
 cwdiff
 ndiff
+atlas +gcc5
+metis +gcc5
+parmetis +gcc5 +openmpi
+vecLibFort
+suitesparse +gcc5 +metis +atlas
+sundials +gcc5 +openmpi +atlas
+superlu
+superlu_dist +gcc5 +openmpi
+hypre +gcc5 +openmpi
+c2html
+sowing
+petsc +atlas +gcc5 +hypre +openmpi +parmetis +suitesparse +sundials +superlu +superlu_dist
+py35-petsc4py +gcc5 +openmpi
