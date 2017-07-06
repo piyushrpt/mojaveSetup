@@ -65,3 +65,22 @@
 48. postgis2 +gui +postgresql95 +raster +sfcgal +topology
 49. py27-xmldiff wdiff cwdiff ndiff
 50. qgis +postgresql95 +qt4
+
+
+### For petsc (massive matrix inversions)
+
+1. atlas +gcc5
+2. metis +gcc5
+3. parmetis +gcc5 +openmpi
+4. vecLibFort
+5. suitesparse +gcc5 +metis +atlas
+6. sundials +gcc5 +openmpi +atlas
+7. superlu
+8. superlu_dist +gcc5 +openmpi
+9. hypre +gcc5 +openmpi
+10. c2html
+11. sowing
+12. petsc +atlas +gcc5 +hypre +openmpi +parmetis +suitesparse +sundials +superlu +superlu_dist
+   - export PETSC_DIR=/opt/local/lib/petsc
+
+13. py35-petsc4py +gcc5 +openmpi
