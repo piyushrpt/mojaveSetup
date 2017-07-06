@@ -35,3 +35,6 @@ sudo port select --set ipython3 py35-ipython
 ####If you do use pgsqlserver for your applications
 ####Useful to have when running GIS stuff
 sudo /opt/local/lib/postgresql95/bin/pg_ctl -D /opt/local/var/db/postgresql95/defaultdb -l logfile start
+
+###Setup PETSc Environment variables
+export PETSC_DIR=/opt/local/lib/petsc
