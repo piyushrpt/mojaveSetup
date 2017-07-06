@@ -1,4 +1,4 @@
-###Manual installation of ports
+### Manual installation of ports
 
 - Install ports with ''sudo port install'' unless specified otherwise.
 
