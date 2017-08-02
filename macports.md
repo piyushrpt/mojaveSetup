@@ -4,8 +4,12 @@
 
 - Note that the gcc, python, postgresql versions evolve with time. Pick a consistent set for installing your ports
 
+
+#### Basic C/C++ compiler
 1. gcc5
   - sudo port select gcc mp-gcc5 (restart terminal)
+  
+#### Standard tools on a linux system  
 2. cmake gmake bison gawk autoconf autoconf-archive
 3. gconf coreutils automake pkgconfig dpkg ctags
 4. tree unzip unrar szip p7zip gzip gnutar cabextract
@@ -14,17 +18,21 @@
 7. xorg-libXt +flat_namespace
 8. freetype tiff openmotif
 9. subversion
+
+#### Python versions
 10. python27
    - sudo port select python python27
 11. python35
    - sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.5/bin/python3 /opt/local/bin/python3
    - sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.5/include/python3.5m /opt/local/include/python3.5m
+   
+#### Useful computational stuff   
 12. fftw +gcc5 fftw-single +gcc5
 13. fftw-3 +gcc5 fftw-3-long +gcc5 fftw-3-single +gcc5
 14. aria2 openldap
 15. openmpi-default +gcc5 openmpi-gcc5 +fortran
    - sudo port select mpi openmpi-gcc5-fortran 
-16. texlive +doc +full
+16. texlive +doc +full   (This is full LaTeX installation. Only needed if you plan to use LaTeX)
 17. lapack +gfortran
 18. eigen3 +blas +gcc5
 19. gsl +gcc5
@@ -38,6 +46,8 @@
 26. opencv +python27
 27. gimp2 ImageMagick
 28. samba3 swig swig-python
+
+#### Python2-packages
 29. py27-numpy +gcc5 (+atlas is recommended but port is often broken with this option)
 30. py27-scipy +gcc5 (+atlas is recommended but port is often broken with this option)
 31. py27-matplotlib +cairo +tkinter
@@ -49,6 +59,8 @@
 35. py27-gdal py27-cython py27-h5py
 36. py27-lxml py27-networkx py27-shapely
 37. py27-pygrib py27-pyproj py27-cartopy py27-fiona py27-matplotlib-basemap
+
+#### Python3-packages
 38. py35-numpy +gcc5
    - +atlas is recommended but port is often broken with this option
 39. py35-scipy +gcc5
@@ -59,6 +71,8 @@
 43. py35-ipython +notebook +parallel
    - sudo port select --set ipython3 py35-ipython
 44. py35-mpi4py +gcc5 +openmpi
+
+#### Other useful GIS stuff
 45. gmt5 kealib pandoc
 46. zmq py27-zmq py35-zmq
 47. py35-bokeh py35-dynd py35-dask py35-sphinx py35-pip
