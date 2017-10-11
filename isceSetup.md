@@ -123,7 +123,7 @@ PRJ_SCONS_BUILD = /Users/agram/tools/isce/build/201604
 PRJ_SCONS_INSTALL = /Users/agram/tools/isce/install/201604/isce
 
 LIBPATH =  /opt/local/lib
-CPPPATH =  /opt/local/include/python3.5m
+CPPPATH =  /opt/local/include/python3.6m
 FORTRANPATH =  /opt/local/include
 FORTRAN = gfortran
 CC = gcc

@@ -15,10 +15,10 @@ sudo port select gcc mp-gcc5
 sudo port select python python27
 
 
-####Since python27 is default python - Python3.5 wont be available in default directories
+####Since python27 is default python - Python3.6 wont be available in default directories
 ####So create links to make this happen
-sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.5/bin/python3 /opt/local/bin/python3
-sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.5/include/python3.5m /opt/local/include/python3.5m
+sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.6/bin/python3 /opt/local/bin/python3
+sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.6/include/python3.6m /opt/local/include/python3.6m
 
 
 ####Set default MPI
@@ -30,7 +30,7 @@ sudo port select --set ipython py27-ipython
 sudo port select --set ipython2 py27-ipython
 
 ####Setup default ipython3
-sudo port select --set ipython3 py35-ipython
+sudo port select --set ipython3 py36-ipython
 
 ####If you do use pgsqlserver for your applications
 ####Useful to have when running GIS stuff

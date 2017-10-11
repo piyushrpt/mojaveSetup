@@ -22,9 +22,9 @@
 #### Python versions
 10. python27
    - sudo port select python python27
-11. python35
-   - sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.5/bin/python3 /opt/local/bin/python3
-   - sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.5/include/python3.5m /opt/local/include/python3.5m
+11. python36
+   - sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.6/bin/python3 /opt/local/bin/python3
+   - sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.6/include/python3.6m /opt/local/include/python3.6m
    
 #### Useful computational stuff   
 12. fftw +gcc5 fftw-single +gcc5
@@ -61,25 +61,25 @@
 37. py27-pygrib py27-pyproj py27-cartopy py27-fiona py27-matplotlib-basemap
 
 #### Python3-packages
-38. py35-numpy +gcc5
+38. py36-numpy +gcc5
    - +atlas is recommended but port is often broken with this option
-39. py35-scipy +gcc5
+39. py36-scipy +gcc5
    - +atlas is recommended but port is often broken with this option
-40. py35-matplotlib +cairo +tkinter py35-matplotlib-basemap
-41. py35-pandas py35-sympy py35-yaml py35-simplejson
-42. py35-h5py py35-cartopy py35-shapely py35-fiona py35-networkx
-43. py35-ipython +notebook +parallel
-   - sudo port select --set ipython3 py35-ipython
-44. py35-mpi4py +gcc5 +openmpi
+40. py36-matplotlib +cairo +tkinter py36-matplotlib-basemap
+41. py36-pandas py36-sympy py36-yaml py36-simplejson
+42. py36-h5py py36-cartopy py36-shapely py36-fiona py36-networkx
+43. py36-ipython +notebook +parallel
+   - sudo port select --set ipython3 py36-ipython
+44. py36-mpi4py +gcc5 +openmpi
 
 #### Other useful GIS stuff
 45. gmt5 kealib pandoc
-46. zmq py27-zmq py35-zmq
-47. py35-bokeh py35-dynd py35-dask py35-sphinx py35-pip
+46. zmq py27-zmq py36-zmq
+47. py36-bokeh py36-dynd py36-dask py36-sphinx py36-pip
 48. postgis2 +gui +postgresql95 +raster +sfcgal +topology
 49. py27-xmldiff wdiff cwdiff ndiff
 50. qgis +postgresql95 +qt4
-
+51. py27-backports-functools\_lru\_cache
 
 ### For petsc (massive matrix inversions)
 
@@ -97,4 +97,4 @@
 12. petsc +atlas +gcc5 +hypre +openmpi +parmetis +suitesparse +sundials +superlu +superlu_dist
    - export PETSC_DIR=/opt/local/lib/petsc
 
-13. py35-petsc4py +gcc5 +openmpi
+13. py36-petsc4py +gcc5 +openmpi

@@ -27,7 +27,7 @@ tiff
 openmotif
 subversion
 python27
-python35
+python36
 fftw +gcc5
 fftw-single +gcc5
 fftw-3 +gcc5 
@@ -89,32 +89,33 @@ py27-pyproj
 py27-cartopy 
 py27-fiona 
 py27-matplotlib-basemap
-py35-numpy +gcc5 
-py35-scipy +gcc5 
-py35-matplotlib +cairo +tkinter
-py35-matplotlib-basemap
-py35-pandas
-py35-sympy
-py35-yaml
-py35-simplejson
-py35-h5py
-py35-cartopy
-py35-shapely
-py35-fiona
-py35-networkx
-py35-ipython +notebook +parallel
-py35-mpi4py +gcc5 +openmpi
+py27-backports-functools_lru_cache
+py36-numpy +gcc5 
+py36-scipy +gcc5 
+py36-matplotlib +cairo +tkinter
+py36-matplotlib-basemap
+py36-pandas
+py36-sympy
+py36-yaml
+py36-simplejson
+py36-h5py
+py36-cartopy
+py36-shapely
+py36-fiona
+py36-networkx
+py36-ipython +notebook +parallel
+py36-mpi4py +gcc5 +openmpi
 gmt5
 kealib
 pandoc
 zmq
 py27-zmq
-py35-zmq
-py35-bokeh
-py35-dynd
-py35-dask
-py35-sphinx
-py35-pip
+py36-zmq
+py36-bokeh
+py36-dynd
+py36-dask
+py36-sphinx
+py36-pip
 postgis2 +gui +postgresql95 +raster +sfcgal +topology
 py27-xmldiff
 wdiff
@@ -132,4 +133,4 @@ hypre +gcc5 +openmpi
 c2html
 sowing
 petsc +atlas +gcc5 +hypre +openmpi +parmetis +suitesparse +sundials +superlu +superlu_dist
-py35-petsc4py +gcc5 +openmpi
+py36-petsc4py +gcc5 +openmpi
