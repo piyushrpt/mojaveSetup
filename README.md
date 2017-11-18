@@ -1,7 +1,7 @@
 ## Instructions for setting up an OS X El Capitan machine from scratch
 ------------
 
-#### Before you start
+### Before you start
 ----------
 1. Google chrome
 2. Alfred 2
@@ -11,7 +11,7 @@
 6. All OS updates from App store (Restart if needed)
 
 
-#### Macports
+### Macports
 ---------
 
 1. Install XCode from App store
@@ -25,7 +25,7 @@
    - sudo port selfupdate
 6. Restart terminal
 
-##### Option 1: Automated installation  (Not extensively tested ...)
+#### Option 1: Automated installation  (Not extensively tested ...)
 -----------
 
 You can automatically install all the required ports with the following command:
@@ -41,7 +41,7 @@ Once you run this command, make sure you choose the right variants of active por
 ```
 
 
-##### Option 2: Manual installation of ports (recommended)
+#### Option 2: Manual installation of ports (recommended)
 ----------
 
 You will have to manually run series of "port install" commands.
@@ -51,7 +51,7 @@ For instructions see [here](./macports.md)
 
 
 
-####Other programs
+### Other programs
 ------------
 
 ###### Textwrangler
@@ -72,3 +72,7 @@ For instructions see [here](./macports.md)
 ##### You are ready to install ISCE
 ------------------------------------
 - Follow instructions [here](./isceSetup.md)
+
+##### QGIS setup for use within Python scripts
+------------------------------------
+- If you use QGIS to compose maps, follow instructions [here](./qgis.md)
