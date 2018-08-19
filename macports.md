@@ -69,6 +69,9 @@
 6. sudo port install py36-matplotlib +cairo
 7. sudo port install py27-pandas
 8. sudo port install py36-pandas
+9. sudo port install py36-cython
+   - ln -s /opt/local/bin/cython-3.6 /opt/local/bin/cython3
+   - The link reproduces the environment that we usually get on linux machines
 9. sudo port install py27-h5py
 10. sudo port install py36-h5py
 11. sudo port install py36-matplotlib-basemap
