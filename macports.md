@@ -6,8 +6,8 @@
 
 #### a. Basic C/C++ compiler
 1. sudo port select gcc7
-  - sudo port select gcc mp-gcc7
-  - restart terminal after this
+   - sudo port select gcc mp-gcc7
+   - Restart terminal after this
 
 #### b. Python versions
 1. sudo port install python27
@@ -79,23 +79,25 @@
 16. sudo port install swig swig-python
 17. sudo port install py36-ipython
    - sudo port select --set ipython3 py36-ipython
-15. sudo port install py36-bokeh py36-dynd py36-dask (Optional packages)
+18. sudo port install py36-bokeh py36-dynd py36-dask (Optional packages)
 
 #### i. GIS stuff
 1. sudo port install proj
 2. sudo gdal +curl +expat +geos +hdf4 +hdf5 +netcdf +openjpeg +postgresql95 +sqlite3
-   - Add this environment variable to "basic" module (preferred) or in .bashrc/.bash\_profile/.profile (Not recommended) 
+   - Add this environment variable to "basic" module (preferred) or in .bashrc/.bash\_profile/.profile (Not recommended). See [modules.md](./modules.md).
    - GDAL\_DATA=/opt/local/share/gdal
-4. sudo port install py36-gdal
-5. sudo port install gmt5 +ggtw3
-6. sudo port install -s kealib
+3. sudo port install py36-gdal
+4. sudo port install gmt5 +ggtw3
+5. sudo port install -s kealib
    - Don't forget the "-s" to indicate build from source
-7. sudo port install postgis2 +gui +postgresql95 +raster +sfcgal +topology
-8. sudo port install liblas
-9. sudo port install grass7 +postgresql95
-10. sudo port install qgis +postgresql95
-11. sudo port install qgis3 +postgresql95 +python36
-12. sudo port install py36-cartopy py36-shapely py36-fiona py36-rasterio
+   - Add this environment variable to "basic" module (preferred) or in .bashrc/.bash\_profile/.profile  (Not recommended). See [modules.md](./modules.md).
+   - GDAL\_DRIVER\_PATH=/opt/local/lib/gdalplugins
+6. sudo port install postgis2 +gui +postgresql95 +raster +sfcgal +topology
+7. sudo port install liblas
+8. sudo port install grass7 +postgresql95
+9. sudo port install qgis +postgresql95
+10. sudo port install qgis3 +postgresql95 +python36
+11. sudo port install py36-cartopy py36-shapely py36-fiona py36-rasterio
 
 #### j. Online data access
 1. sudo port install aria2 openldap samba3
