@@ -59,7 +59,7 @@
 1. sudo port install cairo gimp2 ImageMagick
 
 
-#### Python packages
+#### h. Python packages
 1. sudo port install py27-numpy +gcc7
 2. sudo port install py36-numpy +gcc7
 3. sudo port install py27-scipy +gcc7
@@ -81,7 +81,7 @@
    - sudo port select --set ipython3 py36-ipython
 15. sudo port install py36-bokeh py36-dynd py36-dask (Optional packages)
 
-####GIS stuff
+#### i. GIS stuff
 1. sudo port install proj
 2. sudo gdal +curl +expat +geos +hdf4 +hdf5 +netcdf +openjpeg +postgresql95 +sqlite3
    - Add this environment variable to "basic" module (preferred) or in .bashrc/.bash\_profile/.profile (Not recommended) 
@@ -97,10 +97,10 @@
 11. sudo port install qgis3 +postgresql95 +python36
 12. sudo port install py36-cartopy py36-shapely py36-fiona py36-rasterio
 
-####Online data access
+#### j. Online data access
 1. sudo port install aria2 openldap samba3
 
-####Document generation/manipulation
+#### k. Document generation/manipulation
 1. sudo port install texlive +doc +full
    - This is full LaTeX installation. Only needed if you plan to use LaTeX
 2. sudo port install pandoc
@@ -110,7 +110,7 @@
 5. sudo port install doxygen
 
 
-####Jupyter
+#### l. Jupyter
 1. sudo port install py36-jupyter py36-jupyter\_client
 2. Instructions for installing contributed notebook extensions
     - sudo pip-3.6 install jupyter\_contrib\_nbextensions 

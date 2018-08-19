@@ -6,7 +6,7 @@ The basic setup for such a python script would like:
 https://gist.github.com/spara/1251012
 
 A full description of features available at the python level can be found here:
-http://docs.qgis.org/testing/en/docs/pyqgis\_developer\_cookbook/index.html
+http://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/index.html
 
 To allow us to switch between QGIS and qgis3 seamlessly - we will create one module file for each and declare one to be in conflict with the other. This ensures that we can have only one of the two modules can be loaded at any time and we dont mix their environment settings.
 

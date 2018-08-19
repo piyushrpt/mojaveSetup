@@ -1,4 +1,4 @@
-###Environment modules
+## Environment modules
 ----------------
 
 This section describes the setting up of "environment modules" on El Capitan. 
@@ -30,7 +30,7 @@ export MANPATH=/opt/local/share/man:$MANPATH
 ###Add these two lines to setup modules
 ##If using another shell use that instead of bash
 source /usr/local/Modules/3.2.10/init/bash
-module load use.own   #This allows module files in your $HOME/privatemodules to be used
+module load use.own   #This allows module files in your /Users/agram/privatemodules to be used
 module load basic     #Replacement for adding stuff to .bashrc/.bash_profile/.profile
 ```
 
@@ -38,8 +38,9 @@ module load basic     #Replacement for adding stuff to .bashrc/.bash_profile/.pr
 #### Create the "basic" module
 ---------
 
-We move all the stuff that we usually put in the .bashrc / .bash\_profile /.profile to a basic module files located at $HOME/privatemodules/basic. We load this module by default in .bashrc / .bash\_profile / .profile.
+We move all the stuff that we usually put in the .bashrc / .bash\_profile /.profile to a basic module files located at /Users/agram/privatemodules/basic. We load this module by default in .bashrc / .bash\_profile / .profile.
 
+Remember to close the terminal and reopen a fresh one for further work after you setup this file. This will ensure that the basic module will be loaded by default.
 
 ```bash
 #%Module1.0#####################################################################
@@ -63,8 +64,8 @@ set     version      3.2.10
 set-alias       "rm"    "rm -i"
 set-alias       "cp"    "cp -i"
 set-alias       "mv"    "mv -i"
-set-alias       "gvim"  "mvim"      #Makes macvim just like on linux with gvim
+set-alias       "gvim"  "mvim"      #Same name as on a linux machine
 #setenv          PETSC_DIR       /opt/local/lib/petsc #Uncomment if you want PETSC
-setenv          GDAL_DATA       /opt/local/share/gdal
+setenv          GDAL_DATA       /opt/local/share/gdal #Needed for GDAL ancillary data
 #setenv          GDAL_DRIVER_PATH    /opt/local/lib/gdalplugins #Uncomment if you want kealib support
 ```
