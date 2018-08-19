@@ -1,100 +1,126 @@
-### Manual installation of ports
-
-- Install ports with ''sudo port install'' unless specified otherwise.
+## Manual installation of ports
 
 - Note that the gcc, python, postgresql versions evolve with time. Pick a consistent set for installing your ports
 
+- In our case, we will be using gcc7, python36 and postgresql95
 
-#### Basic C/C++ compiler
-1. gcc5
-  - sudo port select gcc mp-gcc5 (restart terminal)
-  
-#### Standard tools on a linux system  
-2. cmake gmake bison gawk autoconf autoconf-archive
-3. gconf coreutils automake pkgconfig dpkg ctags
-4. tree unzip unrar szip p7zip gzip gnutar cabextract
-5. gawk gsed
-6. wget +ssl
-7. xorg-libXt +flat_namespace
-8. freetype tiff openmotif
-9. subversion
+#### a. Basic C/C++ compiler
+1. sudo port select gcc7
+  - sudo port select gcc mp-gcc7
+  - restart terminal after this
 
-#### Python versions
-10. python27
+#### b. Python versions
+1. sudo port install python27
    - sudo port select python python27
-11. python36
-   - sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.6/bin/python3 /opt/local/bin/python3
+
+2. sudo port install python36
+   - sudo port select python3 python36
    - sudo ln -s /opt/local/Library/Frameworks/Python.framework/Versions/3.6/include/python3.6m /opt/local/include/python3.6m
-   
-#### Useful computational stuff   
-12. fftw +gcc5 fftw-single +gcc5
-13. fftw-3 +gcc5 fftw-3-long +gcc5 fftw-3-single +gcc5
-14. aria2 openldap
-15. openmpi-default +gcc5 openmpi-gcc5 +fortran
-   - sudo port select mpi openmpi-gcc5-fortran 
-16. texlive +doc +full   (This is full LaTeX installation. Only needed if you plan to use LaTeX)
-17. lapack +gfortran
-18. eigen3 +blas +gcc5
-19. gsl +gcc5
-20. cgal sfcgal
-21. bzr git rsync
-22. hdf4 hdf5 hdfeos hdfeos5 h5utils
-23. netcdf netcdf-cxx netcdf-fortran grib_api +gcc5
-24. postgresql95 postgresql95-server
+   - The link command is to keep the paths simpler for use with installing software from source
+
+
+#### c. Standard tools on a linux system  
+1. sudo port install cmake gmake bison gawk autoconf autoconf-archive
+2. sudo port install gconf coreutils automake pkgconfig dpkg ctags
+3. sudo port install tree unzip unrar szip p7zip gzip gnutar cabextract
+4. sudo port install gawk gsed
+5. sudo port install wget +ssl
+6. sudo port install xorg-libXt +flat_namespace
+7. sudo port install freetype tiff openmotif
+8. sudo port install MacVim    
+   - This provides vim on OS X
+   - For more details on customizing vim with plugins - see https://github.com/piyushrpt/vimsetup
+
+
+#### d. Repository managers
+1. sudo port install subversion bzr git rsync
+2. sudo port install py36-pip
+
+#### e. Useful computational stuff   
+1. sudo port install fftw-3 +gcc7
+2. sudo port install fftw-3-long +gcc7
+3. sudo port install fftw-3-single +gcc7
+4. sudo port install lapack +gcc7
+5. sudo port install eigen3 +blas +gcc7
+6. sudo port install gsl +gcc5
+7. sudo port install cgal sfcgal
+
+#### f. Data formats
+1. sudo port install hdf4 hdfeos
+2. sudo port install hdf5 +gcc7
+3. sudo port install hdfeos5 h5utils
+4. sudo port install netcdf +gcc7
+5. sudo port install netcdf-cxx +gcc7
+6. sudo port install netcdf-fortran +gcc7
+7. sudo port install postgresql95 postgresql95-server
    - Follow instructions for setting up db that are displayed on the screen during installation
-25. proj cairo scons pandoc
-26. opencv +python27
-27. gimp2 ImageMagick
-28. samba3 swig swig-python
 
-#### Python2-packages
-29. py27-numpy +gcc5 (+atlas is recommended but port is often broken with this option)
-30. py27-scipy +gcc5 (+atlas is recommended but port is often broken with this option)
-31. py27-matplotlib +cairo +tkinter
-32. py27-pandas py27-sympy py27-yaml py27-simplejson py27-Pillow
-33. py27-ipython +notebook +parallel
-   - sudo port select --set ipython py27-ipython
-   - sudo port select --set ipython2 py27-ipython
-34. gdal +curl +expat +geos +hdf4 +hdf5 +netcdf +openjpeg +postgresql95 +sqlite3
-35. py27-gdal py27-cython py27-h5py
-36. py27-lxml py27-networkx py27-shapely
-37. py27-pygrib py27-pyproj py27-cartopy py27-fiona py27-matplotlib-basemap
+#### g. Image manipulation
+1. sudo port install cairo gimp2 ImageMagick
 
-#### Python3-packages
-38. py36-numpy +gcc5
-   - +atlas is recommended but port is often broken with this option
-39. py36-scipy +gcc5
-   - +atlas is recommended but port is often broken with this option
-40. py36-matplotlib +cairo +tkinter py36-matplotlib-basemap
-41. py36-pandas py36-sympy py36-yaml py36-simplejson
-42. py36-h5py py36-cartopy py36-shapely py36-fiona py36-networkx
-43. py36-ipython +notebook +parallel
+
+#### Python packages
+1. sudo port install py27-numpy +gcc7
+2. sudo port install py36-numpy +gcc7
+3. sudo port install py27-scipy +gcc7
+4. sudo port install py36-scipy +gcc7
+5. sudo port install py27-matplotlib +cairo
+   - sudo port install py27-backports-functools\_lru\_cache
+6. sudo port install py36-matplotlib +cairo
+7. sudo port install py27-pandas
+8. sudo port install py36-pandas
+9. sudo port install py27-h5py
+10. sudo port install py36-h5py
+11. sudo port install py36-matplotlib-basemap
+12. sudo port install py36-sympy py36-yaml py36-simplejson py36-networkx
+13. sudo port install zmq py27-zmq py36-zmq
+14. sudo port install scons
+15. sudo port install opencv +python36
+16. sudo port install swig swig-python
+17. sudo port install py36-ipython
    - sudo port select --set ipython3 py36-ipython
-44. py36-mpi4py +gcc5 +openmpi
+15. sudo port install py36-bokeh py36-dynd py36-dask (Optional packages)
 
-#### Other useful GIS stuff
-45. gmt5 kealib pandoc
-46. zmq py27-zmq py36-zmq
-47. py36-bokeh py36-dynd py36-dask py36-sphinx py36-pip
-48. postgis2 +gui +postgresql95 +raster +sfcgal +topology
-49. py27-xmldiff wdiff cwdiff ndiff
-50. qgis +postgresql95 +qt4
-51. py27-backports-functools\_lru\_cache
+####GIS stuff
+1. sudo port install proj
+2. sudo gdal +curl +expat +geos +hdf4 +hdf5 +netcdf +openjpeg +postgresql95 +sqlite3
+   - Add this environment variable to "basic" module (preferred) or in .bashrc/.bash\_profile/.profile (Not recommended) 
+   - GDAL\_DATA=/opt/local/share/gdal
+4. sudo port install py36-gdal
+5. sudo port install gmt5 +ggtw3
+6. sudo port install -s kealib
+   - Don't forget the "-s" to indicate build from source
+7. sudo port install postgis2 +gui +postgresql95 +raster +sfcgal +topology
+8. sudo port install liblas
+9. sudo port install grass7 +postgresql95
+10. sudo port install qgis +postgresql95
+11. sudo port install qgis3 +postgresql95 +python36
+12. sudo port install py36-cartopy py36-shapely py36-fiona py36-rasterio
 
-### For petsc (massive matrix inversions)
+####Online data access
+1. sudo port install aria2 openldap samba3
 
-1. atlas +gcc5
-2. metis +gcc5
-3. parmetis +gcc5 +openmpi
-4. vecLibFort
-5. suitesparse +gcc5 +metis +atlas
-6. sundials +gcc5 +openmpi +atlas
-7. superlu
-8. superlu_dist +gcc5 +openmpi
-9. hypre +gcc5 +openmpi
-10. c2html
-11. sowing
-12. petsc +atlas +gcc5 +hypre +openmpi +parmetis +suitesparse +sundials +superlu +superlu_dist
-   - export PETSC_DIR=/opt/local/lib/petsc
+####Document generation/manipulation
+1. sudo port install texlive +doc +full
+   - This is full LaTeX installation. Only needed if you plan to use LaTeX
+2. sudo port install pandoc
+   - This is used to convert documents from one format to another
+3. sudo port install py27-xmldiff wdiff cwdigg ndiff
+4. sudo port install py36-sphinx
+5. sudo port install doxygen
 
-13. py36-petsc4py +gcc5 +openmpi
+
+####Jupyter
+1. sudo port install py36-jupyter py36-jupyter\_client
+2. Instructions for installing contributed notebook extensions
+    - sudo pip-3.6 install jupyter\_contrib\_nbextensions 
+    - sudo jupyter-3.6 contrib nbextension install --user
+3. Instructions for installing extension configurator
+    - sudo pip-3.6 install jupyter\_nbextensions\_configurator
+    - sudo jupyter-3.6 nbextensions\_configurator enable --user
+4. hide\_code plugin for hiding cells with code if needed
+    - sudo pip-3.6 install hide\_code
+    - sudo jupyter-3.6 nbextension install --py hide\_code
+5. RISE plugin to turn notebooks into slideshow
+    - sudo pip-3.6 install RISE 
+    - sudo jupyter-nbextension-3.6 install rise --py --sys-prefix

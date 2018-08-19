@@ -25,31 +25,17 @@
    - sudo port selfupdate
 6. Restart terminal
 
-#### Option 1: Automated installation  (Not extensively tested ...)
------------
-
-You can automatically install all the required ports with the following command:
-
-```bash
-> sudo port install $(cat ports.txt)
-```
-
-Once you run this command, make sure you choose the right variants of active ports using the following command
-
-```bash
-> sudo source post_ports.sh
-```
-
-
-#### Option 2: Manual installation of ports (recommended)
+#### Manual installation of ports
 ----------
 
 You will have to manually run series of "port install" commands.
-This option has been tested more extensively and hopefully results in fewer errors.
+For detailed instructions see [here](./macports.md)
 
-For instructions see [here](./macports.md)
+#### Other optional ports
+-----------
 
-
+There are other ports of interest for heavy-duty numerical computation. These are not needed for ISCE but can be useful for developing applications. 
+For detailed instructions see [here](./others.md)
 
 ### Other programs
 ------------
@@ -67,10 +53,13 @@ For instructions see [here](./macports.md)
 
 ##### Environment modules
 --------------------------
+- We recommend using "modules" to manage your environment variables
+- Please don't set paths / pythonpaths in your .bashrc/ .bash_profile/ .profile for all the different software that you use. This is a guaranteed recipe for conflicts and disaster.
 - Follow instructions [here](./modules.md)
 
 ##### You are ready to install ISCE
 ------------------------------------
+- We will use "modules" to localize changes to the environment needed to a single module file
 - Follow instructions [here](./isceSetup.md)
 
 ##### QGIS setup for use within Python scripts
