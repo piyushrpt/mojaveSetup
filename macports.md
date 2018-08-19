@@ -72,17 +72,15 @@
 9. sudo port install py36-cython
    - ln -s /opt/local/bin/cython-3.6 /opt/local/bin/cython3
    - The link reproduces the environment that we usually get on linux machines
-9. sudo port install py27-h5py
-10. sudo port install py36-h5py
-11. sudo port install py36-matplotlib-basemap
-12. sudo port install py36-sympy py36-yaml py36-simplejson py36-networkx
-13. sudo port install zmq py27-zmq py36-zmq
-14. sudo port install scons
-15. sudo port install opencv +python36
-16. sudo port install swig swig-python
+10. sudo port install py27-h5py
+11. sudo port install py36-h5py
+12. sudo port install py36-matplotlib-basemap
+13. sudo port install py36-sympy py36-yaml py36-simplejson py36-networkx
+14. sudo port install zmq py27-zmq py36-zmq
+15. sudo port install scons
+16. sudo port install opencv +python36
 17. sudo port install py36-ipython
    - sudo port select --set ipython3 py36-ipython
-18. sudo port install py36-bokeh py36-dynd py36-dask (Optional packages)
 
 #### i. GIS stuff
 1. sudo port install proj

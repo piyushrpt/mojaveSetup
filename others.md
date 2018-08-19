@@ -21,3 +21,12 @@
    - export PETSC_DIR=/opt/local/lib/petsc
 13. sudo port install py36-mpi4py +gcc7 +openmpi
 14. sudo port install py36-petsc4py +gcc7 +openmpi
+
+
+#### Data science related packages
+
+1. sudo port install py36-bokeh py36-dynd py36-dask
+2. sudo port install py36-awscli
+   - sudo port select awscli py36-awscli
+3. sudo port install py36-botocore
+4. sudo port install py36-boto3 
