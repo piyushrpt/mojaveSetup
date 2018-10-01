@@ -65,3 +65,7 @@ For detailed instructions see [here](./others.md)
 ##### QGIS setup for use within Python scripts
 ------------------------------------
 - If you use QGIS to compose maps, follow instructions [here](./qgis.md)
+
+##### SICD setup for use with Python
+------------------------------------
+- If you work with SAR data distributed in SICD formats, and want to be able to use it in combination with ISCE, follow instructions [here](./sicdSetup.md)
