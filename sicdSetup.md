@@ -15,7 +15,7 @@ Lookup table for mapping variables to locations on disk. The variables are not e
 ###Step 1: Setup directory structure
 ---------------------------------------------------------
 
-1. Create the directory ROOT . This directory will contain all future ISCE installations.
+1. Create the directory ROOT . This directory will contain all future SICD-related installations.
 ```bash
 > mkdir /Users/agram/tools/sicd
 ```
@@ -57,7 +57,7 @@ Shown below is the template for sicd module file located at /Users/agram/private
 ```bash
 #%Module1.0#####################################################################
 ##
-## isce modulefile
+## sicd modulefile
 ##
 ## privatemodules/sicd. Generated from dot.in by configure.
 ##
@@ -101,7 +101,7 @@ This instructs modules to look for module files in your HOME/privatemodules fold
 ###Step 4: Load module and install six-library
 ----------------------------------------------
 
-The first thing to do to use any version of ISCE or install a version of ISCE is to load the corresponding module. For this example, I execute
+The first thing to do to use or install six-library is to load the corresponding module. To load the module, I execute
 
 ```bash
 module load sicd
