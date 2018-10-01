@@ -42,7 +42,7 @@
 3. sudo port install fftw-3-single +gcc7
 4. sudo port install lapack +gcc7
 5. sudo port install eigen3 +blas +gcc7
-6. sudo port install gsl +gcc5
+6. sudo port install gsl +gcc7
 7. sudo port install cgal sfcgal
 
 #### f. Data formats
@@ -88,7 +88,7 @@
    - Add this environment variable to "basic" module (preferred) or in .bashrc/.bash\_profile/.profile (Not recommended). See [modules.md](./modules.md).
    - GDAL\_DATA=/opt/local/share/gdal
 3. sudo port install py36-gdal
-4. sudo port install gmt5 +ggtw3
+4. sudo port install gmt5 +fftw3
 5. sudo port install -s kealib
    - Don't forget the "-s" to indicate build from source
    - Add this environment variable to "basic" module (preferred) or in .bashrc/.bash\_profile/.profile  (Not recommended). See [modules.md](./modules.md).
