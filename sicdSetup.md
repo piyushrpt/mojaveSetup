@@ -12,7 +12,7 @@ Lookup table for mapping variables to locations on disk. The variables are not e
 |    MODDIR    |  /Users/agram/privatemodules/sicd |  Module files for SICD                    |
 
 
-###Step 1: Setup directory structure
+### Step 1: Setup directory structure
 ---------------------------------------------------------
 
 1. Create the directory ROOT . This directory will contain all future SICD-related installations.
@@ -34,7 +34,7 @@ The commands for creating this directory structure
 > mkdir src install
 ```
 
-###Step 2: Checkout six-library and sarpy
+### Step 2: Checkout six-library and sarpy
 -----------------------------------------
 
 1. Checkout six-library under src folder
@@ -49,7 +49,12 @@ The commands for creating this directory structure
 > git checkout https://github.com/ngageoint/sarpy.git
 ```
 
-###Step 3: Setup modulefile for six-library and sarpy
+3. Install xerces if you haven't already with macports
+```bash
+> sudo port install xercesc3
+```
+
+### Step 3: Setup modulefile for six-library and sarpy
 ---------------------------------------------------------
 
 Shown below is the template for sicd module file located at /Users/agram/privatemodules/sicd
@@ -98,7 +103,7 @@ If you don't see the sicd module file listed, make sure you have loaded the "use
 This instructs modules to look for module files in your HOME/privatemodules folder.
 
 
-###Step 4: Load module and install six-library
+### Step 4: Load module and install six-library
 ----------------------------------------------
 
 The first thing to do to use or install six-library is to load the corresponding module. To load the module, I execute
@@ -122,7 +127,7 @@ To test the installation, in a python shell try the following import statement:
 ```
 
 
-###Step 5: Ready to use
+### Step 5: Ready to use
 -----------------------
 You are now ready to use SICD. Load the modulefile for the version you want to use and when you want to restore the environment, unload the module
 
