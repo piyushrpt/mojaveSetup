@@ -1,13 +1,13 @@
-## Setting up SICD on El Capitan
+## Setting up SICD on Mojave
 ------
 
-This section describes the setting up of the SICD-related software on El Capitan.
+This section describes the setting up of the SICD-related software on Mojave.
 
 Lookup table for mapping variables to locations on disk. The variables are not environment variables. We just use these to simplify instructions.
 
 |   VARIABLE   |   MY VALUE                        |     Comment                               |
 |--------------|-----------------------------------|-------------------------------------------|
-|    HOME      |  /Users/agram                     |  Default home directory on El Capitan     |
+|    HOME      |  /Users/agram                     |  Default home directory Mojave            |
 |    ROOT      |  /Users/agram/tools/sicd          |  ROOT folder for SICD installation        |
 |    MODDIR    |  /Users/agram/privatemodules/sicd |  Module files for SICD                    |
 
@@ -79,14 +79,14 @@ module-whatis   "adds SICD stuff to your environment"
 set     version      3.2.10
 
 set             tooldir         /Users/agram/tools/sicd/install
-set             sitedir         $tooldir/lib/python3.6/site-packages
+set             sitedir         $tooldir/lib/python3.7/site-packages
 append-path     PATH                $tooldir/bin
 append-path     LD_LIBRARY_PATH     $tooldir/lib:$sitedir
 append-path     DYLD_LIBRARY_PATH   $sitedir/coda:$sitedir/pysix
 append-path     PYTHONPATH          $sitedir
 append-path     PYTHONPATH      /Users/agram/tools/sicd/src
 setenv          SIX_SCHEMA_PATH         $tooldir/conf/schema/six
-set-alias       "wafconfigure"    "PYTHON=python3 python3 waf configure --prefix=/Users/agram/tools/sicd/install --enable-cpp11 --with-cflags=\"-I/opt/local/include\" --with-cxxflags=\"-I/opt/local/include\" --with-linkflags=\"-L/opt/local/lib -L/opt/local/Library/Frameworks/Python.framework/Versions/3.6/lib\" --nobuild-xml --alltests"
+set-alias       "wafconfigure"    "PYTHON=python3 python waf configure --prefix=/Users/agram/tools/sicd/install --enable-cpp11 --with-cflags=\"-I/opt/local/include\" --with-cxxflags=\"-I/opt/local/include\" --with-linkflags=\"-L/opt/local/lib -L/opt/local/Library/Frameworks/Python.framework/Versions/3.7/lib\" --nobuild-xml --alltests"
 ```
 
 Once you have set this up, you should be able to see this module listed amongst the available modules:
@@ -116,16 +116,20 @@ Change to the six-library folder
 ```bash
 > cd /Users/agram/tools/sicd/src/six-library
 > wafconfigure
-> python3 waf build
-> python3 waf install
+> python waf build
+> python waf install
 ```
+Note that we used **python** to build six-library even though we asked it to link against **python3**.
+This is because, waf packaged with six-library seems to have issues. We just resort to using python2 for using waf.
+
 
 To test the installation, in a python shell try the following import statement:
 ```bash
-> from pysix.six_sicd import *
+#> from pysix.six_sicd import *
 > import sarpy
 ```
 
+At present, waf doesn't build the python bindings for six with python3.7
 
 ### Step 5: Ready to use
 -----------------------

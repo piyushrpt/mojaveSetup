@@ -1,20 +1,20 @@
 ## Environment modules
 ----------------
 
-This section describes the setting up of "environment modules" on El Capitan. 
+This section describes the setting up of "environment modules" on Mojave. 
 There are no macports for "modules". 
-We will build this from scratch. The build process on OS X has changed slightly since modules v4. The instructions below are from the latest version (4.1.3 as on 2018-08-19).
+We will build this from scratch. The build process on OS X has changed slightly since modules v4. The instructions below are from the latest version (4.2.4 as on 2019-06-01).
 
 1. Download modules from here: https://sourceforge.net/projects/modules/
 2. Note that you will need the macports installation done before you start with modules.
-3. Create soft link as shown below (modules developers use homebrew and look for ggrep)
+3. If you don't have ggrep via the coreutils port, create soft link as shown below (modules developers use homebrew and look for ggrep)
    - sudo ln -s /usr/bin/grep /opt/local/bin/ggrep
 
 4.  "sed" on OS X does not support some options. So, we need to replace it with "gsed" for auto-complete to work.
     -  Edit the init/bash\_completion.in in the untarred directory and replace "sed" with "gsed" in functions \_module\_avail(), \_module\_savelist() and \_module\_not\_yet\_loaded()
 
 5. In the untarred directory:
-    - ./configure --prefix=/usr/local/Modules
+    - ./configure --prefix=/usr/local/Modules --with-tcl=/opt/local/lib
     - make
     - sudo make install
 
@@ -72,7 +72,6 @@ set-alias       "rm"    "rm -i"   #I'm paranoid. This will ask for confirmation
 set-alias       "cp"    "cp -i"
 set-alias       "mv"    "mv -i"
 set-alias       "gvim"  "mvim"    #Same name as on a linux machine
-#setenv          PETSC_DIR       /opt/local/lib/petsc #Uncomment if you want PETSC
 setenv          GDAL_DATA       /opt/local/share/gdal #Needed for GDAL ancillary data
 #setenv          GDAL_DRIVER_PATH    /opt/local/lib/gdalplugins #Uncomment if you want kealib support
 ```

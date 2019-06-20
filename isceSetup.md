@@ -1,7 +1,7 @@
 ## Setting up ISCE on El Capitan
 ------
 
-This section describes the setting up of the ISCE software on an El Capitan.
+This section describes the setting up of the ISCE software on an Mojave.
 The setup is general and allows one to simultaneously install multiple versions on the machine.
 
 
@@ -9,10 +9,10 @@ Lookup table for mapping variables to locations on disk. The variables are not e
 
 |   VARIABLE   |   MY VALUE                        |     Comment                               |
 |--------------|-----------------------------------|-------------------------------------------|
-|    HOME      |  /Users/agram                     |  Default home directory on El Capitan     |
+|    HOME      |  /Users/agram                     |  Default home directory on Mojave         |
 |    ROOT      |  /Users/agram/tools/isce          |  ROOT folder for ISCE installation        |
 |    MODDIR    |  /Users/agram/privatemodules/isce |  Folder for storing module files for ISCE |
-|    VERSION   |  201604                           |  Version number of ISCE release           |
+|    VERSION   |  201906                           |  Version number of ISCE release           |
 
 
 
@@ -62,11 +62,13 @@ The commands for creating this directory structure
 ###Step 2: Download ISCE tarball
 ---------------------------------
 
-Tarballs of different versions of ISCE can be found [here](https://winsar.unavco.org/isce.html)
+Tarballs of different versions of ISCE can be found [here](https://github.com/isce-framework/isce2/releases)
 
-To generalize the instructions, we will refer to the downloaded tarball as "isce-2.0.0_VERSION.tar.bz2".
+To generalize the instructions, we will refer to the downloaded tarball as "isce-v2.3.1.tar.gz".
 
-At the time of writing these instructions, the latest version was "201604".
+At the time of writing these instructions, the latest version was "2.3.1".
+
+Instead, if you want to build the latest version from the git repository see Step 4 below.
 
 
 ###Step 3: Create subfolders for the new version
@@ -89,7 +91,7 @@ ROOT
 Commands for setting up this directory structure
 ```bash
 > cd /Users/agram/tools/isce
-> mkdir config/201604 src/201604 build/201604 install/201604
+> mkdir config/201906 src/201906 build/201906 install/201906
 ```
 
 ###Step 4: Untar downloaded tarball in src/VERSION
@@ -98,35 +100,44 @@ Commands for setting up this directory structure
 Untar the downloaded tarball in the src/VERSION folder. This will unpack a directory called isce. 
 
 ```bash
-> cd /Users/agram/tools/isce/src/201604
-> tar xjvf ~/Downloads/isce-2.0.0_201604.tar.bz2
+> cd /Users/agram/tools/isce/src/201906
+> tar xzvf ~/Downloads/isce-v2.3.1.tar.gz
 ```
+
+If instead, you want to use the latest version from the git repository
+```bash
+> cd /Users/agram/tools/isce/src/201906
+> git clone https://github.com/isce-framework/isce2.git
+```
+
 
 ###Step 5: Create SConfigISCE file in config/VERSION
 ----------------------------------------------------
 
-SConfigISCE is the configuration file used to set paths to the correct directories for building ISCE. We will create a new SConfigISCE for each version to ensure the ability to modify every installed version as needed. The SConfigISCE file needs to be created under ROOT/config/VERSION folder.
+SConfigISCE is the configuration file used to set paths to the correct directories for building ISCE. We will create a new SConfigISCE for each version to ensure the ability to modify every installed version as needed. The SConfigISCE file needs to be created under ROOT/config/VERSION folder. Note that this set of instructions is different from the earlier versions as we now use "clang" for building the software. We still need to install gcc packages for gfortran. 
 
 ```bash
-> cd /Users/agram/tools/isce/config/201604
+> cd /Users/agram/tools/isce/config/201906
 > vi SConfigISCE
 ```
 
-The template for SConfigISCE is shown below. You only need to change the PRJ_SCONS_BUILD and PRJ_SCONS_INSTALL values.
+The template for SConfigISCE is shown below. You only need to change the PRJ\_SCONS\_BUILD and PRJ\_SCONS\_INSTALL values.
 
 ```bash
 
 #Build Directory
-PRJ_SCONS_BUILD = /Users/agram/tools/isce/build/201604  
+PRJ_SCONS_BUILD = /Users/agram/tools/isce/build/201906  
 
 #Install Directory
-PRJ_SCONS_INSTALL = /Users/agram/tools/isce/install/201604/isce
+PRJ_SCONS_INSTALL = /Users/agram/tools/isce/install/201906/isce
 
-LIBPATH =  /opt/local/lib
-CPPPATH =  /opt/local/include/python3.6m
+LIBPATH =  /opt/local/lib /opt/local/lib/gcc7
+CPPPATH =  /opt/local/include /opt/local/include/libomp /opt/local/include/python3.7m
 FORTRANPATH =  /opt/local/include
 FORTRAN = gfortran
-CC = gcc
+CC = clang
+CXX = clang++
+STDCPPLIB = c++
 
 MOTIFLIBPATH = /opt/local/lib              # path to libXm.dylib
 X11LIBPATH = /opt/local/lib                # path to libXt.dylib
@@ -140,7 +151,7 @@ X11INCPATH = /opt/local/include            # path to location of the X11 directo
 We use environment modules to activate/ deactivate a specific version of ISCE.
 Every version will need its own module file located at MODDIR/VERSION, that sets up appropriate environment variables and paths.
 
-Shown below is the template for isce/201604 located at /Users/agram/privatemodules/isce/201604
+Shown below is the template for isce/201906 located at /Users/agram/privatemodules/isce/201906
 
 ```bash
 #%Module1.0#####################################################################
@@ -163,7 +174,7 @@ module-whatis   "adds ISCE stuff to your environment"
 set     version      3.2.10
 
 #Change this for each version
-set     isceversion 201604
+set     isceversion 201906
 
 set		basedir		/Users/agram/tools/isce
 set		installdir      $basedir/install/$isceversion/isce
@@ -183,7 +194,7 @@ prepend-path    PYTHONPATH    $basedir/install/$isceversion
 Once you have set this up, you should be able to see this module listed amongst the available modules:
 ```bash
 > module list
-  1) use.own        3) gee   5) isce/201604
+  1) use.own        3) gee   5) isce/201906
   2) basic          4) isce/201512
 ```
 
@@ -205,7 +216,7 @@ module load isce/201612
 
 Change to the source directory and use scons to install.
 ```bash
-> cd /Users/agram/tools/isce/src/201604/isce
+> cd /Users/agram/tools/isce/src/201906/isce
 > scons install
 ```
 
@@ -217,7 +228,7 @@ This should install isce. Run "scons install" twice to make sure that all compon
 You are now ready to use isce. Load the modulefile for the version you want to use and when you want to restore the environment, unload the module
 
 ```bash
-> module load isce/201604
+> module load isce/201906
 > .... Your work ....
 > module unload isce
 ```
